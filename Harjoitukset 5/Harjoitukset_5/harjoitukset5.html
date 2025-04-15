@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Harjoitukset 5: t1, t2, t3 ja t4</title>
+    <style>
+        /* Tehtävä 4 - Piilotetaan Tehtävä 3 aluksi */
+        #t3 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Tehtävä 1 -->
+  <div id="t1">
+    <h1>Tehtävä 1</h1>
+    <p>Anna nimesi: </p>
+    <input id="namefield" type="text" name="firstname" value="">
+    <button id="go1">GO!</button>
+    <p id="output1"></p>
+  </div>
+
+  <!-- Tehtävä 2 -->
+  <div id="t2">
+    <h1>Tehtävä 2</h1>
+    <p>Anna ikäsi: </p>
+    <input id="agefield" type="number" name="age" value="">
+    <button id="go2">GO!</button>
+    <p id="output2"></p>
+  </div>
+
+  <!-- Tehtävä 3 (Piilotettu aluksi) -->
+  <div id="t3">
+    <h1>Tehtävä 3</h1>
+    <p>Anna lukualueen alaraja: </p>
+    <input id="lowerlimit" type="number" title="Anna alaraja" value="">
+    <p>Anna lukualueen yläraja: </p>
+    <input id="upperlimit" type="number" title="Anna yläraja" value="">
+    <p>Arvaa kokonaislukua: </p>
+    <input id="guess" type="number" title="Arvaa kokonaislukua" value="">
+    <button id="go3">GO!</button>
+    <p id="output3"></p>
+  </div>
+
+  <!-- Ladataan erilliset JavaScript-tiedostot -->
+  <script src="t1.js"></script>
+  <script src="t2.js"></script>
+  <script src="t3.js"></script>
+  <script src="t4.js"></script>
+
+</body>
+</html>

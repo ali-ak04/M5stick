@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majoitus | Taipaleen Leirintäkeskus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="kuva_2024-11-01_142137859.png" alt="Taipaleen Leirintäkeskus logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="toiminta.html">Toiminta</a></li>
+            <li><a href="majoitus.html">Majoitus</a></li>
+            <li><a href="ruokailu.html">Ruokailu</a></li>
+            <li><a href="tilat.html">Tilat</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="majoitus">
+        <div class="content-overlay">
+            <h2>Majoitus</h2>
+            <p>
+                Meillä voit vuokrata mökin, teltan, asuntoauto- tai vaunupaikan tai huoneen päärakennukselta.
+            </p>
+            
+            <h3>Mökit:</h3>
+            <p>
+                Mökkejä on kahta kokoa. Pieniä neljän hengen mökkejä löytyy kuusi kappaletta. Niihin voi pedata myös yhden lisävuoteen sohvalle. Suurempia kahdeksan hengen mökkejä on kymmenen kappaletta.
+                <br>
+                Pienen mökin vuorokausihinta on 70 €. <a href="#" onclick="openModal('smallCabinForm')">Vuokraa pieni mökki tästä</a>.
+                <br>
+                Ison mökin vuorokausihinta on 100 €. <a href="#" onclick="openModal('largeCabinForm')">Vuokraa suuri mökki tästä</a>.
+            </p>
+            
+            <h3>Teltat:</h3>
+            <p>
+                Telttailualueellamme voit vuokrata telttamajoituksen. Hinta on 5 € per teltta + 10 € per yöpyjä.
+                <br>
+                <a href="#" onclick="openModal('tentForm')">Varaa telttamajoitus tästä</a>.
+            </p>
+            
+            <h3>Asuntoautopaikat:</h3>
+            <p>
+                Asuntoautoille- ja vaunuille on joukko omia paikkoja, ja vuokra on 20 € per yö.
+                <br>
+                <a href="#" onclick="openModal('caravanForm')">Varaa asuntoautopaikka tästä</a>.
+            </p>
+            
+            <h3>Hotellimajoitus:</h3>
+            <p>
+                Päärakennuksessa on 20 kahden hengen huonetta ja 10 neljän hengen huonetta. Kahden hengen huoneen hinta on 90 € ja neljän hengen huoneen hinta on 130 € per yö.
+                <br>
+                <a href="#" onclick="openModal('hotelRoomForm')">Varaa huone tästä</a>.
+            </p>
+            
+
+            <div id="smallCabinForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('smallCabinForm')">&times;</span>
+                    <h3>Varaa pieni mökki</h3>
+                    <form>
+                        <label>Päivämäärä:</label>
+                        <input type="date" required><br><br>
+                        <label>Yöpyjien määrä:</label>
+                        <input type="number" min="1" max="5" required><br><br>
+                        <button type="submit">Varaa</button>
+                    </form>
+                </div>
+            </div>
+            
+
+            <div id="largeCabinForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('largeCabinForm')">&times;</span>
+                    <h3>Varaa suuri mökki</h3>
+                    <form>
+                        <label>Päivämäärä:</label>
+                        <input type="date" required><br><br>
+                        <label>Yöpyjien määrä:</label>
+                        <input type="number" min="1" max="8" required><br><br>
+                        <button type="submit">Varaa</button>
+                    </form>
+                </div>
+            </div>
+            
+
+            <div id="tentForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('tentForm')">&times;</span>
+                    <h3>Varaa telttamajoitus</h3>
+                    <form>
+                        <label>Päivämäärä:</label>
+                        <input type="date" required><br><br>
+                        <label>Yöpyjien määrä:</label>
+                        <input type="number" min="1" max="6" required><br><br>
+                        <button type="submit">Varaa</button>
+                    </form>
+                </div>
+            </div>
+            
+
+            <div id="caravanForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('caravanForm')">&times;</span>
+                    <h3>Varaa asuntoautopaikka</h3>
+                    <form>
+                        <label>Päivämäärä:</label>
+                        <input type="date" required><br><br>
+                        <label>Yöpyjien määrä:</label>
+                        <input type="number" min="1" max="5" required><br><br>
+                        <button type="submit">Varaa</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="hotelRoomForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('hotelRoomForm')">&times;</span>
+                    <h3>Varaa hotellihuone</h3>
+                    <form>
+                        <label>Päivämäärä:</label>
+                        <input type="date" required><br><br>
+                        <label>Huonetyyppi:</label>
+                        <select required>
+                            <option value="2_hengen">Kahden hengen huone</option>
+                            <option value="4_hengen">Neljän hengen huone</option>
+                        </select><br><br>
+                        <button type="submit">Varaa</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+<footer>
+    <p>&copy; 2024 Taipaleen Leirintäkeskus | <a href="yhteystiedot.html">Yhteystiedot</a></p>
+</footer>
+
+</body>
+</html>
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+</script>

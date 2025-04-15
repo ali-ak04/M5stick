@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilat | Taipaleen Leirintäkeskus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="kuva_2024-11-01_142137859.png" alt="Taipaleen Leirintäkeskus logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="toiminta.html">Toiminta</a></li>
+            <li><a href="majoitus.html">Majoitus</a></li>
+            <li><a href="ruokailu.html">Ruokailu</a></li>
+            <li><a href="tilat.html">Tilat</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="tilat">
+        <div class="content-overlay">
+            <h2>Tilat</h2>
+            <p>Meiltä löytyy vuokrattavia tiloja eri tarpeisiin.</p>
+
+            <h3>Juhlatila</h3>
+            <p>Meiltä löytyy ruokasali maksimissaan 80 hengelle. Se sopii hyvin esimerkiksi häiden tai syntymäpäiväjuhlien järjestämiseen, mutta tilassa onnistuvat myös kokoukset. Tarjoamme myös pitopalvelun. Tilan hinta on kesäkaudella 50 € per tunti ja talvikaudella 35 € tunti. Pitopalvelu maksaa erikseen.</p>
+
+            <h3>Kokoustila</h3>
+            <p>Kokoustilaamme mahtuu yhtä aikaa 35 henkilöä. On myös mahdollista tilata pitopalvelustamme kahvitarjoilu lisähintaan. Tilan hinta on 29 € tunnilta.</p>
+
+            <h3>Luokkahuone</h3>
+            <p>Meillä on myös pienempiä tapaamisia varten luokkahuone, johon mahtuu maksimissaan 30 henkilöä. Se soveltuu pienemmille kokouksille tai esimerkiksi koulutuksiin. On myös mahdollista tilata pitopalvelustamme kahvitarjoilu lisähintaan. Tilan hinta on 25 € tunnilta.</p>
+
+            <button id="openFormButton" style="color: #007bff; cursor: pointer; background: none; border: none; padding: 0; font-size: 1.2rem;">Tiedustelut tiloista tästä. (Avaa lomake.)</button>
+        </div>
+    </section>
+</main>
+
+<div id="formModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Tiedustelut tiloista</h3>
+        <form>
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Lähetä</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 8px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: black;
+        text-decoration: none;
+    }
+</style>
+
+<script>
+    const openFormButton = document.getElementById('openFormButton');
+    const formModal = document.getElementById('formModal');
+    const closeButton = document.querySelector('.close');
+
+    openFormButton.onclick = function() {
+        formModal.style.display = 'block';
+    }
+
+    closeButton.onclick = function() {
+        formModal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == formModal) {
+            formModal.style.display = 'none';
+        }
+    }
+</script>
+
+
+<footer>
+    <p>&copy; 2024 Taipaleen Leirintäkeskus | <a href="yhteystiedot.html">Yhteystiedot</a></p>
+</footer>
+
+</body>
+</html>

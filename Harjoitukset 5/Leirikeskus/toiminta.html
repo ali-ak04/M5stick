@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taipaleen Leirintäkeskus - Toiminta</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0.5rem 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+
+    .hero {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+
+
+
+        .content-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            cursor: pointer;
+            color: #007bff; 
+            margin-bottom: 0.5rem;
+        }
+
+        h3:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .toggle-content {
+            display: none;
+            margin-top: 10px;
+            background-color: #2b94f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="kuva_2024-11-01_142137859.png" alt="Taipaleen Leirintäkeskus logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="toiminta.html">Toiminta</a></li>
+            <li><a href="majoitus.html">Majoitus</a></li>
+            <li><a href="ruokailu.html">Ruokailu</a></li>
+            <li><a href="tilat.html">Tilat</a></li>
+            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero" id="toiminta">
+            <div class="content-overlay">
+                <h2>Toiminta</h2>
+                <p>Taipaleen leirintäkeskuksessa on monenlaista toimintaa ympäri vuoden.</p>
+                
+                <div class="section">
+                    <h3 class="toggle-button">Esiintyjät</h3>
+                    <div class="toggle-content">
+                        <p>Leirintäkeskuksen pääsalissa on useina kesäiltoina erilaisia musiikki- tai tanssiesityksiä sekä ajoittain myös standup komiikkaa.</p>
+                        <p>Katso kesän 2024 esiintyjät <span class="link-button" style="color: #007bff; cursor: pointer;">tästä</span>.</p>
+                        <div class="toggle-content" id="esiintyjat-info">
+                            <p>Kesän 2024 esiintyjät varmistuvat myöhemmin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="toggle-button">Venevuokraus</h3>
+                    <div class="toggle-content">
+                        <p>Soutuveneitä voi vuokrata päärakennukselta kesäkaudella hintaan 5 € tunti. Maksimiaika vuokraukselle on kuusi tuntia.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="toggle-button">Kylpyläosasto</h3>
+                    <div class="toggle-content">
+                        <p>Leirintäkeskuksen kylpyläosasto on auki vuoden ympäri. Kesällä käytössä on myös ulkoallas. Kylpyläosastolla on syvä uima-allas, kaksi poreallasta sekä yksi lasten allas liukumäkineen. Saunaosastolla on tavallinen sauna sekä höyrysauna. Hinta aikuiselta 12 €, opiskelijalta tai eläkeläiseltä 10 € ja kouluikäiseltä lapselta 6 €. Alle kouluikäiset uivat ilmaiseksi.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="toggle-button">Opastetut luontoretket</h3>
+                    <div class="toggle-content">
+                        <p>Kesäaikaan joka lauantai on tarjolla opastettu luontoretki, jolle lähdetään kello 13 päärakennukselta. Reitti ei ole esteetön. Ei vaadi kovaa kuntoa. Hintaan sisältyy pienet eväät. Kesto noin kolme tuntia. Hinta 15 € aikuiselta, 12 € opiskelijalta tai eläkeläiseltä ja 8 € kouluikäiseltä lapselta. Alle kouluikäiset pääsevät mukaan ilmaiseksi.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Yhteydenotto</h3>
+                    <p>Voitte myös ehdottaa toimintaa ottamalla meihin yhteyttä, niin katsomme, voimmeko järjestää sen.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Taipaleen Leirintäkeskus | <a href="yhteystiedot.html">Yhteystiedot</a></p>
+    </footer>
+
+    <script>
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+        const linkButtons = document.querySelectorAll('.link-button');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('show');
+            });
+        });
+
+        linkButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const info = document.getElementById('esiintyjat-info');
+                info.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
